@@ -1241,7 +1241,11 @@
     <h2 id="booking-title">Записатися</h2>
     <p class="booking-intro">Залиште свої контактні дані та коротке повідомлення.</p>
 
-    <form class="booking-form" id="booking-form">
+    <form class="booking-form" id="booking-form" action="https://formsubmit.co/aperederiy07@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Нова заявка на консультацію — aperederiy.com">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://aperederiy.com/?sent=1">
+      <input type="text" name="_honey" style="display:none">
       <div class="booking-field">
         <label for="booking-first-name">Ім’я</label>
         <input id="booking-first-name" name="first_name" type="text" autocomplete="given-name" required>
@@ -1268,7 +1272,7 @@
       </div>
 
       <button class="button booking-submit" type="submit">Надіслати →</button>
-      <p class="booking-note">Форма запису готова. Отримання заявок на електронну пошту буде підключено наступним кроком.</p>
+      <p class="booking-note">Після натискання «Надіслати» ваша заявка буде відправлена Альоні Передерій.</p>
     </form>
   </div>
 </div>
@@ -1303,10 +1307,6 @@
 
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
-    });
-
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
     });
   })();
 </script>

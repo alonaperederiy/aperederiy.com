@@ -82,6 +82,14 @@
       line-height: 1.1;
     }
 
+    .brand-logo {
+      display: block;
+      width: auto;
+      height: 58px;
+      max-width: 260px;
+      object-fit: contain;
+    }
+
     .brand-main {
       font-family: "Cormorant Garamond", serif;
       font-size: 29px;
@@ -665,6 +673,11 @@
         display: none;
       }
 
+      .brand-logo {
+        height: 44px;
+        max-width: 180px;
+      }
+
       .brand-main {
         font-size: 19px;
         line-height: 1;
@@ -803,9 +816,8 @@
 <header>
   <div class="container nav">
 
-    <a class="brand" href="#">
-      <span class="brand-main">Healing Beyond Performance</span>
-      <span class="brand-sub">Alona Perederiy · Psychologist</span>
+    <a class="brand" href="#" aria-label="Healing Beyond Performance — Alona Perederiy">
+      <img class="brand-logo" src="healing1.jpg" alt="Healing Beyond Performance">
     </a>
 
     <nav>

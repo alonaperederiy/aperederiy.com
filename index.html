@@ -347,27 +347,32 @@
       color: var(--muted);
     }
 
-    .badges {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 25px;
+    .verification-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+      align-items: stretch;
     }
 
-    .badge {
-      min-width: 210px;
-      min-height: 92px;
-      padding: 20px 25px;
+    .verification-card {
+      min-height: 112px;
+      padding: 16px 18px;
       border: 1px solid var(--line);
       border-radius: 17px;
       background: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 600;
-      color: #555;
       box-shadow: 0 8px 25px rgba(0,0,0,.05);
+      overflow: hidden;
+    }
+
+    .verification-card img {
+      width: 100%;
+      max-width: 190px;
+      max-height: 70px;
+      object-fit: contain;
+      margin: 0 auto;
     }
 
     /* ABOUT */
@@ -504,7 +509,8 @@
       }
 
       .nav {
-        min-height: 76px;
+        min-height: 66px;
+        gap: 10px;
       }
 
       nav a:not(.nav-button) {
@@ -512,16 +518,20 @@
       }
 
       .brand-main {
-        font-size: 23px;
+        font-size: 19px;
+        line-height: 1;
+        max-width: 180px;
       }
 
       .brand-sub {
-        font-size: 8px;
+        font-size: 7px;
+        letter-spacing: .18em;
       }
 
       .nav-button {
-        padding: 11px 17px;
-        font-size: 12px;
+        padding: 9px 14px;
+        font-size: 11px;
+        white-space: nowrap;
       }
 
       .hero {
@@ -530,24 +540,41 @@
       }
 
       .hero-photo {
-        min-height: 500px;
+        min-height: 360px;
         background-position: center 25%;
       }
 
       .hero-copy {
-        padding: 60px 24px 70px;
+        padding: 38px 22px 48px;
+      }
+
+      .eyebrow {
+        margin-bottom: 16px;
+        font-size: 10px;
+        letter-spacing: .22em;
       }
 
       h1 {
-        font-size: 56px;
+        font-size: 46px;
+        line-height: .96;
+        margin-bottom: 18px;
       }
 
       .profession {
-        font-size: 13px;
+        font-size: 11px;
+        letter-spacing: .12em;
       }
 
       .hero-text {
-        font-size: 15px;
+        margin-top: 20px;
+        font-size: 14px;
+      }
+
+      .button {
+        width: 100%;
+        margin-top: 22px;
+        padding: 14px 18px;
+        font-size: 12px;
       }
 
       .hero-details {
@@ -556,12 +583,13 @@
       }
 
       section {
-        padding: 75px 0;
+        padding: 58px 0;
       }
 
       .section-title {
-        font-size: 45px;
-        margin-bottom: 38px;
+        font-size: 36px;
+        line-height: 1.08;
+        margin-bottom: 30px;
       }
 
       .help-grid {
@@ -603,12 +631,19 @@
         grid-template-columns: 1fr;
       }
 
-      .badges {
-        flex-direction: column;
+      .verification-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
       }
 
-      .badge {
-        width: min(100%,320px);
+      .verification-card {
+        min-height: 88px;
+        padding: 12px;
+      }
+
+      .verification-card img {
+        max-width: 145px;
+        max-height: 58px;
       }
     }
   </style>

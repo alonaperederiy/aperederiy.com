@@ -1241,10 +1241,9 @@
     <h2 id="booking-title">Записатися</h2>
     <p class="booking-intro">Залиште свої контактні дані та коротке повідомлення.</p>
 
-    <form class="booking-form" id="booking-form" action="https://formsubmit.co/aperederiy07@gmail.com" method="POST">
+    <form class="booking-form" id="booking-form" action="https://formsubmit.co/ajax/aperederiy07@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="Нова заявка на консультацію — aperederiy.com">
       <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://aperederiy.com/?sent=1">
       <input type="text" name="_honey" style="display:none">
       <div class="booking-field">
         <label for="booking-first-name">Ім’я</label>
@@ -1272,7 +1271,7 @@
       </div>
 
       <button class="button booking-submit" type="submit">Надіслати →</button>
-      <p class="booking-note">Після натискання «Надіслати» ваша заявка буде відправлена Альоні Передерій.</p>
+      <p class="booking-note" id="booking-status">Після натискання «Надіслати» ваша заявка буде відправлена Альоні Передерій.</p>
     </form>
   </div>
 </div>
@@ -1307,6 +1306,41 @@
 
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+    });
+
+    const status = document.getElementById('booking-status');
+    const submitButton = form.querySelector('.booking-submit');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      submitButton.disabled = true;
+      submitButton.textContent = 'Надсилаємо…';
+      status.textContent = 'Надсилаємо вашу заявку…';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(data.message || 'Помилка відправлення');
+
+        status.textContent = data.message || 'Дякую! Заявку надіслано.';
+        form.reset();
+        submitButton.textContent = 'Надіслано ✓';
+        setTimeout(() => {
+          closeModal();
+          submitButton.disabled = false;
+          submitButton.textContent = 'Надіслати →';
+          status.textContent = 'Після натискання «Надіслати» ваша заявка буде відправлена Альоні Передерій.';
+        }, 2500);
+      } catch (error) {
+        status.textContent = 'Не вдалося надіслати. Спробуйте ще раз або напишіть на aperederiy07@gmail.com';
+        submitButton.disabled = false;
+        submitButton.textContent = 'Надіслати →';
+      }
     });
   })();
 </script>

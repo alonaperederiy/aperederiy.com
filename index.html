@@ -1305,6 +1305,42 @@
       if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
     });
 
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const submitButton = form.querySelector('.booking-submit');
+      const status = document.getElementById('booking-status');
+
+      if (!form.reportValidity()) return;
+
+      submitButton.disabled = true;
+      submitButton.textContent = 'Надсилаємо…';
+      status.textContent = 'Надсилаємо вашу заявку…';
+
+      fetch('https://formspree.io/f/xqpanbog', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(async response => {
+        if (!response.ok) {
+          const data = await response.json().catch(() => ({}));
+          throw new Error(data.error || 'Submission failed');
+        }
+        form.reset();
+        submitButton.textContent = 'Надіслано ✓';
+        status.textContent = 'Дякую! Ваше повідомлення надіслано. Я зв’яжуся з вами найближчим часом.';
+        setTimeout(() => {
+          submitButton.disabled = false;
+          submitButton.textContent = 'Надіслати →';
+        }, 3000);
+      })
+      .catch(() => {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Надіслати →';
+        status.textContent = 'Не вдалося надіслати повідомлення. Спробуйте ще раз.';
+      });
+    });
+
 
   })();
 </script>

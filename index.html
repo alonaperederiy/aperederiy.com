@@ -896,6 +896,18 @@
       nav a:not(.nav-button) { display: inline-block; }
       nav .nav-button { display: none; }
     }
+
+    .signature-logo img {
+      display: block;
+      width: min(100%, 360px);
+      height: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 700px) {
+      .signature-logo { margin-top: 22px; }
+      .signature-logo img { width: min(78vw, 300px); }
+    }
   </style>
 </head>
 
@@ -1141,8 +1153,8 @@
           Спокійна, професійна психологічна підтримка для жінок, які переживають тривогу, емоційне виснаження, розрив стосунків і життєві зміни.
         </p>
 
-        <div class="signature">
-          Healing Beyond Performance
+        <div class="signature signature-logo">
+          <img src="healing1.jpg" alt="Healing Beyond Performance">
         </div>
 
       </div>

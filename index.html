@@ -1388,5 +1388,12 @@
   © 2026 Alona Perederiy · Healing Beyond Performance
 </footer>
 
+
+<script>
+  // Keep the homepage canonical: remove a stray bare # from the address bar.
+  if (window.location.pathname === "/" && window.location.href.endsWith("#")) {
+    history.replaceState(null, "", "/");
+  }
+</script>
 </body>
 </html>

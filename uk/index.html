@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Психолог у Полтаві та онлайн | Альона Передерій</title>
+  <meta name="description" content="Альона Передерій — психолог, сертифікований позитивний психотерапевт. Очні консультації у Полтаві та онлайн українською, російською та англійською мовами.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #fbf8f3;
+      --white: #ffffff;
+      --soft: #f4efe8;
+      --soft2: #eee7de;
+      --text: #343434;
+      --muted: #6f6b67;
+      --gold: #b69b80;
+      --gold-dark: #9b8168;
+      --line: #e7ded4;
+      --dark: #4b4b4a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Manrope", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(251,248,243,.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(182,155,128,.15);
+    }
+
+    .nav {
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-logo {
+      display: block;
+      width: auto;
+      height: 58px;
+      max-width: 260px;
+      object-fit: contain;
+    }
+
+    .brand-main {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 29px;
+      font-weight: 500;
+    }
+
+    .brand-sub {
+      margin-top: 5px;
+      font-size: 10px;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    nav a {
+      transition: .25s;
+    }
+
+    nav a:hover {
+      color: var(--gold-dark);
+    }
+
+    .nav-button,
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--gold);
+      color: white;
+      font-weight: 600;
+      letter-spacing: .03em;
+      transition: .25s;
+      box-shadow: 0 8px 22px rgba(122,94,70,.15);
+    }
+
+    .nav-button {
+      padding: 13px 24px;
+    }
+
+    .button {
+      padding: 17px 29px;
+      margin-top: 28px;
+    }
+
+    .nav-button:hover,
+    .button:hover {
+      background: var(--gold-dark);
+      transform: translateY(-2px);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 720px;
+      display: grid;
+      grid-template-columns: .94fr 1.06fr;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 20% 35%, rgba(255,255,255,.98), transparent 43%),
+        linear-gradient(110deg,#fbf8f3 0%,#f6eee5 50%,#ead8ca 100%);
+    }
+
+    .hero-copy {
+      padding: 110px max(7vw, 40px) 90px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: .30em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 24px;
+    }
+
+    h1,
+    h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: clamp(58px, 6vw, 90px);
+      line-height: .92;
+      letter-spacing: -.03em;
+      margin-bottom: 25px;
+    }
+
+    .profession {
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: 15px;
+      line-height: 1.55;
+      max-width: 560px;
+    }
+
+    .hero-text {
+      max-width: 570px;
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .hero-details {
+      display: flex;
+      gap: 35px;
+      margin-top: 40px;
+      padding-top: 25px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .hero-detail {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .detail-icon {
+      font-size: 23px;
+      color: var(--gold-dark);
+    }
+
+    .hero-photo {
+      min-height: 720px;
+      position: relative;
+      background:
+        url("alena2.jpg") center 42% / cover no-repeat;
+    }
+
+    .hero-photo::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(251,248,243,.72) 0%,
+        rgba(251,248,243,.22) 12%,
+        transparent 30%
+      );
+      pointer-events: none;
+    }
+
+    .hero-photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      box-shadow: inset 0 0 70px rgba(90,60,40,.05);
+      pointer-events: none;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      font-size: clamp(46px,5vw,66px);
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title span {
+      color: var(--gold);
+    }
+
+    /* HELP */
+
+    #help {
+      background: white;
+    }
+
+    .help-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 22px;
+    }
+
+    .help-card {
+      min-height: 180px;
+      background: #faf8f5;
+      border: 1px solid #f1ece6;
+      border-radius: 25px;
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      gap: 23px;
+      transition: .25s;
+    }
+
+    .help-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 40px rgba(71,58,47,.07);
+    }
+
+    .icon {
+      width: 68px;
+      height: 68px;
+      min-width: 68px;
+      border-radius: 50%;
+      background: var(--soft);
+      display: grid;
+      place-items: center;
+      color: var(--gold-dark);
+      font-size: 28px;
+    }
+
+    .help-card h3 {
+      font-size: 17px;
+      line-height: 1.45;
+    }
+
+    /* THERAPY */
+
+    #formats {
+      background: var(--soft);
+    }
+
+    .formats-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 25px;
+    }
+
+    .format-card {
+      background: white;
+      border-radius: 26px;
+      padding: 34px;
+      display: flex;
+      gap: 22px;
+      align-items: flex-start;
+      box-shadow: 0 12px 35px rgba(70,55,42,.035);
+    }
+
+    .format-card h3 {
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+
+    .format-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* CREDENTIALS */
+
+    #credentials {
+      background: white;
+    }
+
+    .credentials-wrap {
+      text-align: center;
+    }
+
+    .credentials-intro {
+      max-width: 720px;
+      margin: -30px auto 50px;
+      color: var(--muted);
+    }
+
+    .verification-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .verification-card {
+      min-height: 112px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,.05);
+      overflow: hidden;
+    }
+
+    .verification-card img {
+      width: 100%;
+      max-width: 190px;
+      max-height: 70px;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+
+    /* ABOUT */
+
+    #about {
+      background: var(--bg);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 75px;
+      align-items: center;
+    }
+
+    .about-photo {
+      border-radius: 170px 170px 20px 20px;
+      overflow: hidden;
+      min-height: 600px;
+      background: url("alona-about.jpg") center / cover no-repeat;
+    }
+
+    .about-copy h2 {
+      font-size: clamp(50px,5vw,68px);
+      line-height: 1;
+      margin-bottom: 28px;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .about-copy .about-profession {
+      color: var(--gold-dark);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      line-height: 1.6;
+    }
+
+    .signature {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 34px;
+      color: var(--gold-dark);
+      margin-top: 30px;
+    }
+
+    /* ARTICLES */
+
+    #articles {
+      background: white;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 25px;
+    }
+
+    .article {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 32px;
+      background: #fff;
+    }
+
+    .article small {
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+
+    .article h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 29px;
+      line-height: 1.1;
+      margin: 15px 0;
+    }
+
+    .article p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--gold-dark);
+      font-weight: 600;
+    }
+
+    /* CONTACT */
+
+    #contact {
+      background: var(--dark);
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 70px;
+    }
+
+    .contact-grid h2 {
+      font-size: clamp(48px,5vw,68px);
+      line-height: 1;
+      margin-bottom: 30px;
+    }
+
+    .contact-grid p {
+      color: #dedbd7;
+      max-width: 620px;
+      margin-bottom: 18px;
+    }
+
+    .contact-info {
+      padding-top: 10px;
+    }
+
+    .contact-line {
+      margin-bottom: 22px;
+      font-size: 17px;
+    }
+
+    .privacy-note {
+      grid-column: 1 / -1;
+      margin-top: 28px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,.18);
+      color: #cfcac5;
+      font-size: 12px;
+      line-height: 1.75;
+    }
+
+    .privacy-note p {
+      max-width: 900px;
+      margin-bottom: 10px;
+    }
+
+    .privacy-note strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    footer {
+      background: #40403f;
+      color: #cfcac5;
+      padding: 28px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+
+    /* BOOKING MODAL */
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    .booking-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(52,52,52,.48);
+      backdrop-filter: blur(7px);
+    }
+
+    .booking-modal.is-open {
+      display: flex;
+    }
+
+    .booking-dialog {
+      position: relative;
+      width: min(620px, 100%);
+      max-height: calc(100vh - 48px);
+      overflow-y: auto;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 42px;
+      box-shadow: 0 28px 80px rgba(40,32,26,.22);
+    }
+
+    .booking-close {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      width: 38px;
+      height: 38px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--soft);
+      color: var(--text);
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .booking-dialog h2 {
+      font-size: 46px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .booking-intro {
+      color: var(--muted);
+      margin-bottom: 28px;
+      font-size: 14px;
+    }
+
+    .booking-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .booking-field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .booking-field.full {
+      grid-column: 1 / -1;
+    }
+
+    .booking-field label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+
+    .booking-field input,
+    .booking-field textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: white;
+      color: var(--text);
+      font: inherit;
+      font-size: 14px;
+      padding: 13px 15px;
+      outline: none;
+      transition: .2s;
+    }
+
+    .booking-field input:focus,
+    .booking-field textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(182,155,128,.12);
+    }
+
+    .booking-field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .booking-submit {
+      grid-column: 1 / -1;
+      border: 0;
+      cursor: pointer;
+      margin-top: 4px;
+      padding: 15px 24px;
+    }
+
+    .booking-note {
+      grid-column: 1 / -1;
+      color: var(--muted);
+      font-size: 11px;
+      text-align: center;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      .booking-modal {
+        padding: 14px;
+      }
+
+      .booking-dialog {
+        padding: 32px 20px 24px;
+        border-radius: 20px;
+      }
+
+      .booking-dialog h2 {
+        font-size: 36px;
+      }
+
+      .booking-form {
+        grid-template-columns: 1fr;
+        gap: 13px;
+      }
+
+      .booking-field.full,
+      .booking-submit,
+      .booking-note {
+        grid-column: 1;
+      }
+
+      .container {
+        width: min(100% - 34px, 1180px);
+      }
+
+      .nav {
+        min-height: 66px;
+        gap: 10px;
+      }
+
+      nav a:not(.nav-button) {
+        display: none;
+      }
+
+      .brand-logo {
+        height: 44px;
+        max-width: 180px;
+      }
+
+      .brand-main {
+        font-size: 19px;
+        line-height: 1;
+        max-width: 180px;
+      }
+
+      .brand-sub {
+        font-size: 7px;
+        letter-spacing: .18em;
+      }
+
+      .nav-button {
+        padding: 9px 14px;
+        font-size: 11px;
+        white-space: nowrap;
+      }
+
+      .hero {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      .hero-photo {
+        min-height: min(132vw, 820px);
+        background-position: center 35%;
+        background-size: cover;
+        background-color: #f4efe8;
+      }
+
+      .hero-photo::before {
+        background: linear-gradient(180deg, transparent 76%, rgba(251,248,243,.18) 100%);
+      }
+
+      .hero-copy {
+        padding: 38px 22px 48px;
+      }
+
+      .eyebrow {
+        margin-bottom: 16px;
+        font-size: 10px;
+        letter-spacing: .22em;
+      }
+
+      h1 {
+        font-size: 46px;
+        line-height: .96;
+        margin-bottom: 18px;
+      }
+
+      .profession {
+        font-size: 11px;
+        letter-spacing: .12em;
+      }
+
+      .hero-text {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+
+      .button {
+        width: 100%;
+        margin-top: 22px;
+        padding: 14px 18px;
+        font-size: 12px;
+      }
+
+      .hero-details {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
+      .section-title {
+        font-size: 36px;
+        line-height: 1.08;
+        margin-bottom: 30px;
+      }
+
+      .help-grid {
+        grid-template-columns: repeat(2,1fr);
+        gap: 13px;
+      }
+
+      .help-card {
+        min-height: 190px;
+        padding: 22px 15px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .help-card h3 {
+        font-size: 15px;
+      }
+
+      .formats-grid,
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .format-card {
+        padding: 25px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .about-photo {
+        min-height: 500px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .verification-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .verification-card {
+        min-height: 88px;
+        padding: 12px;
+      }
+
+      .verification-card img {
+        max-width: 145px;
+        max-height: 58px;
+      }
+    }
+
+    .mobile-hero-eyebrow { display: none; }
+
+    @media (max-width: 700px) {
+      .hero { display: flex; flex-direction: column; }
+      .mobile-hero-eyebrow {
+        display: block;
+        order: 0;
+        padding: 14px 18px 13px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.25;
+        letter-spacing: .22em;
+        text-transform: uppercase;
+        color: var(--gold-dark);
+        background: var(--cream);
+      }
+      .hero-photo { order: 1; }
+      .hero-copy { order: 2; }
+      .hero-copy > .eyebrow { display: none; }
+    }
+
+    /* Compact mobile vertical rhythm: remove accidental empty bands */
+    @media (max-width: 700px) {
+      .mobile-hero-eyebrow { padding: 10px 18px 9px; }
+      .hero-copy { padding: 28px 22px 26px; }
+      .hero-details { margin-top: 24px; padding-top: 18px; }
+      #help { padding-top: 42px; padding-bottom: 42px; }
+      #help + #formats { margin-top: 0; }
+      #about { padding-top: 46px; padding-bottom: 46px; }
+      #about .about-grid { gap: 24px; }
+      #about .about-photo:empty { display: none; min-height: 0; }
+    }
+
+    /* Keep the full site menu visible above the hero on phones */
+    @media (max-width: 700px) {
+      header { position: relative; }
+      .nav {
+        min-height: 116px;
+        display: grid;
+        grid-template-columns: 108px 1fr;
+        align-items: center;
+        gap: 10px;
+      }
+      .brand-logo {
+        width: 102px;
+        height: auto;
+        max-width: 102px;
+      }
+      nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 7px 13px;
+        font-size: 11px;
+        line-height: 1.2;
+      }
+      nav a:not(.nav-button) { display: inline-block; }
+      nav .nav-button { display: none; }
+    }
+
+    .signature-logo img {
+      display: block;
+      width: min(100%, 360px);
+      height: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 700px) {
+      .signature-logo { margin-top: 22px; }
+      .signature-logo img { width: min(78vw, 300px); }
+    }
+
+    /* Mobile spacing cleanup */
+    @media (max-width: 700px) {
+      section { padding: 42px 0; }
+      .section-title { margin-bottom: 22px; }
+      .about-grid { gap: 20px; }
+      #contact { padding: 38px 0 30px; }
+      #contact .contact-grid { gap: 24px; }
+      #contact .eyebrow { margin-bottom: 10px; }
+      #contact .contact-grid h2 { font-size: 42px; margin-bottom: 20px; }
+      #contact .contact-grid p { margin-bottom: 12px; line-height: 1.65; }
+      #contact .contact-info { padding-top: 0; }
+      #contact .contact-line { margin-bottom: 14px; font-size: 16px; line-height: 1.45; }
+      #contact .privacy-note { margin-top: 4px; padding-top: 20px; line-height: 1.6; }
+      #contact .privacy-note p { margin-bottom: 9px; }
+      footer { padding: 18px 20px; }
+    }
+
+    @media (max-width: 700px) {
+      #credentials .section-title {
+        font-size: 34px;
+        line-height: 1.16;
+        letter-spacing: -0.3px;
+        margin-bottom: 14px;
+      }
+      #credentials .section-title span {
+        display: block;
+        line-height: 1.16;
+      }
+      #credentials .credentials-intro {
+        margin: 0 auto 30px;
+        line-height: 1.55;
+        max-width: 92%;
+      }
+    }
+  </style>
+<link rel="stylesheet" href="/assets/languages.css"><script defer src="/assets/languages.js"></script></head>
+
+
+<body>
+
+<header>
+  <div class="container nav">
+
+    <a class="brand" href="/" aria-label="Healing Beyond Performance — Alona Perederiy">
+      <img class="brand-logo" src="healing1.jpg" alt="Healing Beyond Performance">
+    </a>
+
+    <nav>
+      <a href="/">Головна</a>
+      <a href="/about/">Про мене</a>
+      <a href="/#formats">Послуги</a>
+      <a href="/articles/">Статті</a>
+      <a href="/#contact">Контакти</a>
+      <a href="#booking" class="nav-button js-booking-open">Записатися →</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="mobile-hero-eyebrow">Онлайн та очна психологічна підтримка</div>
+
+    <div class="hero-copy">
+
+      <div class="eyebrow">
+        Онлайн та очна психологічна підтримка
+      </div>
+
+      <h1>
+        Передерій<br>
+        Альона Сергіївна
+      </h1>
+
+      <div class="profession">
+        Психолог · сертифікований позитивний психотерапевт
+      </div>
+
+      <p class="hero-text">
+        Спокійна, професійна психологічна підтримка для жінок,
+        які переживають тривогу, емоційне виснаження,
+        труднощі у стосунках і життєві зміни.
+      </p>
+
+      <a href="#booking" class="button js-booking-open">
+        ЗАПИСАТИСЯ НА КОНСУЛЬТАЦІЮ →
+      </a>
+
+      <div class="hero-details">
+
+        <div class="hero-detail">
+          <span class="detail-icon">◎</span>
+          <span>Очно у Полтаві<br>та онлайн</span>
+        </div>
+
+        <div class="hero-detail">
+          <span class="detail-icon">◌</span>
+          <span>Три мови<br>UA / RU / EN</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="hero-photo"></div>
+
+  </section>
+
+
+  <!-- HELP -->
+
+  <section id="help">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Чим я можу <span>допомогти</span>
+      </h2>
+
+      <div class="help-grid">
+
+        <div class="help-card">
+          <div class="icon">♡</div>
+          <h3>Тривога та емоційне виснаження</h3>
+        </div>
+
+        <div class="help-card">
+          <div class="icon">✦</div>
+          <h3>Самоцінність і впевненість</h3>
+        </div>
+
+        <div class="help-card">
+          <div class="icon">♧</div>
+          <h3>Труднощі у стосунках</h3>
+        </div>
+
+        <div class="help-card">
+          <div class="icon">↝</div>
+          <h3>Життєві зміни</h3>
+        </div>
+
+        <div class="help-card">
+          <div class="icon">♢</div>
+          <h3>Емоційне відновлення</h3>
+        </div>
+
+        <div class="help-card">
+          <div class="icon">♧</div>
+          <h3>Терапія «Walk & Talk»</h3>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FORMATS -->
+
+  <section id="formats">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Формати <span>терапії</span>
+      </h2>
+
+      <div class="formats-grid">
+
+        <div class="format-card">
+          <div class="icon">▱</div>
+          <div>
+            <h3>Онлайн-сесії</h3>
+            <p>
+              Зручні консультації з будь-якої точки світу.
+            </p>
+          </div>
+        </div>
+
+        <div class="format-card">
+          <div class="icon">♧</div>
+          <div>
+            <h3>Сесії «Walk & Talk»</h3>
+            <p>
+              Терапевтична розмова під час прогулянки на природі.
+            </p>
+          </div>
+        </div>
+
+        <div class="format-card">
+          <div class="icon">◇</div>
+          <div>
+            <h3>Очна психологічна підтримка</h3>
+            <p>
+              Особисті консультації у Полтаві.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <div class="container contact-grid">
+
+      <div>
+
+        <div class="eyebrow" style="color:#d3bda7">
+          Консультації
+        </div>
+
+        <h2>
+          Можна почати<br>з розмови
+        </h2>
+
+        <p>
+          Якщо ви хочете записатися на консультацію або
+          уточнити формат роботи, напишіть мені.
+        </p>
+
+        <p>
+          Усе, чим ви ділитеся під час консультацій,
+          є конфіденційним.
+        </p>
+
+      </div>
+
+      <div class="contact-info">
+
+        <div class="contact-line">
+          ✉ &nbsp;
+          <a href="mailto:aperederiy07@gmail.com">
+            aperederiy07@gmail.com
+          </a>
+        </div>
+
+        <div class="contact-line">
+          ☎ &nbsp;
+          <a href="tel:+380683488825">
+            +380 68 348 8825
+          </a>
+        </div>
+
+        <div class="contact-line">
+          ◎ &nbsp; Полтава, Україна
+        </div>
+
+        <div class="contact-line">
+          ◇ &nbsp; Онлайн консультації
+        </div>
+
+        <div class="contact-line">
+          ◎ &nbsp;
+          <a href="https://www.instagram.com/strongermindspace/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Stronger Mind Space">
+            Instagram · Stronger Mind Space
+          </a>
+        </div>
+
+        <div class="contact-line">
+          in &nbsp;
+          <a href="https://www.linkedin.com/in/alona-perederiy-38032b404" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Alona Perederiy">
+            LinkedIn · Alona Perederiy
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="privacy-note">
+        <p><strong>Alona Perederiy</strong>, психолог, дипломований член Британського психологічного товариства (BPS).</p>
+
+        <p><strong>Конфіденційність.</strong> Усе, чим ви ділитеся зі мною під час консультацій, є конфіденційним. Ваші контактні дані та інформація, необхідна для нашої роботи, зберігаються у захищеному вигляді та не передаються стороннім особам без вашої згоди, окрім випадків, передбачених законом.</p>
+
+        <p>Я дотримуюся британських вимог щодо захисту персональних даних та зареєстрована в Information Commissioner's Office (ICO) — незалежному органі Великої Британії, який контролює дотримання законодавства у сфері захисту персональної інформації.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+
+<div class="booking-modal" id="booking" role="dialog" aria-modal="true" aria-labelledby="booking-title" aria-hidden="true">
+  <div class="booking-dialog">
+    <button class="booking-close" type="button" aria-label="Закрити форму">×</button>
+    <h2 id="booking-title">Записатися</h2>
+    <p class="booking-intro">Залиште свої контактні дані та коротке повідомлення.</p>
+
+    <form class="booking-form" id="booking-form" action="https://formspree.io/f/xqpanbog" method="POST">
+      <div class="booking-field">
+        <label for="booking-first-name">Ім’я</label>
+        <input id="booking-first-name" name="first_name" type="text" autocomplete="given-name" required>
+      </div>
+
+      <div class="booking-field">
+        <label for="booking-last-name">Прізвище</label>
+        <input id="booking-last-name" name="last_name" type="text" autocomplete="family-name" required>
+      </div>
+
+      <div class="booking-field">
+        <label for="booking-email">Електронна пошта</label>
+        <input id="booking-email" name="email" type="email" autocomplete="email" required>
+      </div>
+
+      <div class="booking-field">
+        <label for="booking-phone">Номер телефону</label>
+        <input id="booking-phone" name="phone" type="tel" autocomplete="tel" required>
+      </div>
+
+      <div class="booking-field full">
+        <label for="booking-message">Ваше повідомлення</label>
+        <textarea id="booking-message" name="message"></textarea>
+      </div>
+
+      <button class="button booking-submit" type="submit">Надіслати →</button>
+      <p class="booking-note" id="booking-status">Ваші контактні дані будуть надіслані конфіденційно.</p>
+    </form>
+  </div>
+</div>
+
+<script>
+  (() => {
+    const modal = document.getElementById('booking');
+    const form = document.getElementById('booking-form');
+    const closeButton = modal.querySelector('.booking-close');
+    const openButtons = document.querySelectorAll('.js-booking-open');
+
+    const openModal = (event) => {
+      if (event) event.preventDefault();
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      setTimeout(() => document.getElementById('booking-first-name').focus(), 50);
+    };
+
+    const closeModal = () => {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+    };
+
+    openButtons.forEach(button => button.addEventListener('click', openModal));
+    closeButton.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+    });
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const submitButton = form.querySelector('.booking-submit');
+      const status = document.getElementById('booking-status');
+
+      if (!form.reportValidity()) return;
+
+      submitButton.disabled = true;
+      submitButton.textContent = 'Надсилаємо…';
+      status.textContent = 'Надсилаємо вашу заявку…';
+
+      fetch('https://formspree.io/f/xqpanbog', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(async response => {
+        if (!response.ok) {
+          const data = await response.json().catch(() => ({}));
+          throw new Error(data.error || 'Submission failed');
+        }
+        form.reset();
+        submitButton.textContent = 'Надіслано ✓';
+        status.textContent = 'Дякую! Ваше повідомлення надіслано. Я зв’яжуся з вами найближчим часом.';
+        setTimeout(() => {
+          submitButton.disabled = false;
+          submitButton.textContent = 'Надіслати →';
+        }, 3000);
+      })
+      .catch(() => {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Надіслати →';
+        status.textContent = 'Не вдалося надіслати повідомлення. Спробуйте ще раз.';
+      });
+    });
+
+
+  })();
+</script>
+
+<footer>
+  © 2026 Alona Perederiy · Healing Beyond Performance
+</footer>
+
+
+<script>
+  // Keep the homepage canonical: remove a stray bare # from the address bar.
+  if (window.location.pathname === "/" && window.location.href.endsWith("#")) {
+    history.replaceState(null, "", "/");
+  }
+</script>
+</body>
+</html>

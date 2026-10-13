@@ -8,7 +8,7 @@
   bar.className='language-picker';
   bar.setAttribute('aria-label','Choose language / Оберіть мову / Выберите язык');
   labels.forEach(function(item){
-    if(item[0]!== 'uk' && base!=='/contact/')return;
+    if(item[0]!== 'uk' && !['/contact/','/about/'].includes(base))return;
     var a=document.createElement('a');
     a.href=(item[0]==='uk'?'':'/'+item[0])+base;
     a.textContent=item[1];

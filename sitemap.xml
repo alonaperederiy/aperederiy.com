@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://aperederiy.com/</loc></url>
+  <url><loc>https://aperederiy.com/uk/</loc></url>
+  <url><loc>https://aperederiy.com/ru/</loc></url>
   <url><loc>https://aperederiy.com/about/</loc></url>
+  <url><loc>https://aperederiy.com/services/</loc></url>
+  <url><loc>https://aperederiy.com/contact/</loc></url>
   <url><loc>https://aperederiy.com/articles/</loc></url>
+  <url><loc>https://aperederiy.com/en/about/</loc></url>
+  <url><loc>https://aperederiy.com/en/services/</loc></url>
+  <url><loc>https://aperederiy.com/en/contact/</loc></url>
+  <url><loc>https://aperederiy.com/en/articles/</loc></url>
+  <url><loc>https://aperederiy.com/ru/about/</loc></url>
+  <url><loc>https://aperederiy.com/ru/services/</loc></url>
+  <url><loc>https://aperederiy.com/ru/contact/</loc></url>
+  <url><loc>https://aperederiy.com/ru/articles/</loc></url>
   <url><loc>https://aperederiy.com/blog/ya-vse-mozhu-sama/</loc></url>
   <url><loc>https://aperederiy.com/blog/chomu-ya-ne-mozhu-pity-zi-stosunkiv/</loc></url>
   <url><loc>https://aperederiy.com/blog/pislya-psykholoha-stalo-hirshe/</loc></url>
